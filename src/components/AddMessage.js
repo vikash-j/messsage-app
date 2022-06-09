@@ -2,6 +2,7 @@ import React from "react";
 
 class AddMessage extends React.Component {
     state = {
+        id: "",
         name: "",
         message: "",
     };
