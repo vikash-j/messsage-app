@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import Header from "./Header";
 import AddMessage from "./AddMessage";
@@ -9,9 +10,16 @@ function App() {
   const [messages, setMessages] = useState([]);
   
   const addMessageHandler = (message) =>{
-    setMessages([...messages, message]);
+    setMessages([...messages, {id: uuidv4(), ...message}]);
   };
 
+  const removeMessageHandler = (id) => {
+    const newMessageList = messages.filter((message) =>{
+      return message.id !== id;
+    });
+
+    setMessages(newMessageList);
+  }
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(messages));
   },[messages]);
@@ -27,7 +35,7 @@ function App() {
     <div className="ui container">
       <Header/>
       <AddMessage addMessageHandler={addMessageHandler}/>
-      <MessageList messages={messages}/>
+      <MessageList messages={messages} getMessageId={ removeMessageHandler }/>
     </div>
   );
 }
