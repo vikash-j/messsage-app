@@ -1,27 +1,22 @@
-import React from 'react';
-import './App.css';
-import Header from './Header';
-import AddMessage from './AddMessage';
-import MessageList from './MessageList';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./Header";
+import AddMessage from "./AddMessage";
+import MessageList from "./MessageList";
 
 function App() {
-  const Messages = [
-    {
-      id: "1",
-      name: "vik",
-      messagess: "How are you!",
-    },
-    {
-      id: "2",
-      name: "vikash",
-      messagess: "I am Fine!",
-    },
-  ];
+  const [messages, setMessages] = useState([]);
+  
+  const addMessageHandler = (message) =>{
+    console.log(message)
+    setMessages([...messages, message]);
+  };
+
   return (
     <div className="ui container">
       <Header/>
-      <AddMessage/>
-      <MessageList messages={Messages}/>
+      <AddMessage addMessageHandler={addMessageHandler}/>
+      <MessageList messages={messages}/>
     </div>
   );
 }

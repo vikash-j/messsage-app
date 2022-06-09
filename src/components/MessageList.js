@@ -2,7 +2,6 @@ import React from "react";
 import MessageCard from "./MessageCard";
 
 const MessageList = (props) => {
-    console.log(props);
     const renderMessageList = props.messages.map((message)=>{
         return (
             <MessageCard message={message}></MessageCard>
