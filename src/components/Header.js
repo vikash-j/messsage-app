@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = () => {
     return ( 
-        <div className = "ui fixed menu" >
+        <div className = "ui fixed menu Header" >
         <div className = "ui container center" >
-        <h2> Messages </h2> 
+        <b><h2> Messages </h2></b> 
         </div> 
         </div>
     );

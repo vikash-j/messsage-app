@@ -12,8 +12,7 @@ class AddMessage extends React.Component {
             return;
         }
         this.props.addMessageHandler(this.state);
-        this.setState({name: "" , message: ""});
-        console.log(this.state);
+        this.setState({name:" ", message:" "});
     }
 
     render() {
@@ -33,7 +32,7 @@ class AddMessage extends React.Component {
                         value={this.state.message} 
                         onChange={(e) =>this.setState({message: e.target.value})}/>
                     </div>
-                    <button className="ui button blue">Add</button>
+                    <button className="btn-primary-add">Add</button>
                 </form>
             </div>
         );

@@ -12,8 +12,8 @@ const MessageList = (props) => {
         )
     })
     return (
-        <div className="ui celled list">
-            Message List{renderMessageList}
+        <div className="ui celled list message-list">
+            <h3>Message List</h3>{renderMessageList}
         </div>
     );
 }

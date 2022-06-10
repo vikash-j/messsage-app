@@ -1,38 +1,99 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    margin: 50px;
+}
+
+h2,
+h3 {
+    letter-spacing: 1px;
+}
+
+.feild {
+    margin-bottom: 1%;
+    text-shadow: #282c34;
+    font-weight: bold;
+}
+
+.message-list {
+    font-weight: bold;
+}
+
+.btn-primary-add {
+    display: inline-block;
+    height: 46px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid #01405F;
+    background: #01405F;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.btn-primary-add:hover {
+    border: 1px solid #01405F;
+    background: none;
+    color: #01405F;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.icon-css {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.content-msg {
+    opacity: 0.7;
 }
